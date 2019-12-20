@@ -1,0 +1,16 @@
+server:
+  port: 8804
+impala:
+  url: jdbc:impala://10.11.2.1
+  port: 21050
+  schema: kududb
+  user:
+  password:
+  driverClass: org.apache.hive.jdbc.HiveDriver
+spring:
+  application:
+    name: largescreen
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8801/eureka/

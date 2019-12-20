@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.usercenter.mapper.TsMemberInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.usercenter.entity.TsMemberInfo">
+        <id column="id" property="id" />
+        <result column="company_name" property="companyName" />
+        <result column="company_address" property="companyAddress" />
+        <result column="business_lic_pic" property="businessLicPic" />
+        <result column="android_push_id" property="androidPushId" />
+        <result column="ios_push_id" property="iosPushId" />
+        <result column="state" property="state" />
+        <result column="apply_username" property="applyUsername" />
+        <result column="accredit_letter" property="accreditLetter" />
+        <result column="organization_code" property="organizationCode" />
+        <result column="mailing_address" property="mailingAddress" />
+        <result column="parent_id" property="parentId" />
+        <result column="path" property="path" />
+        <result column="remark" property="remark" />
+        <result column="add_unit_date" property="addUnitDate" />
+        <result column="user_time" property="userTime" />
+        <result column="lngitude" property="lngitude" />
+        <result column="latitude" property="latitude" />
+        <result column="type" property="type" />
+        <result column="account_type" property="accountType" />
+        <result column="password_type" property="passwordType" />
+        <result column="bloc_name" property="blocName" />
+        <result column="firm_type" property="firmType" />
+        <result column="mporter_name" property="mporterName" />
+        <result column="car_type" property="carType" />
+        <result column="identity_pic" property="identityPic" />
+        <result column="company_flag" property="companyFlag" />
+        <result column="is_No_children" property="isNoChildren" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, company_name, company_address, business_lic_pic, android_push_id, ios_push_id, state, apply_username, accredit_letter, organization_code, mailing_address, parent_id, path, remark, add_unit_date, user_time, lngitude, latitude, type, account_type, password_type, bloc_name, firm_type, mporter_name, car_type, identity_pic, company_flag, is_No_children
+    </sql>
+
+</mapper>

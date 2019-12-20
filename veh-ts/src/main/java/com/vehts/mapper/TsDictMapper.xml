@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vehts.mapper.TsDictMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.vehts.entity.TsDict">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="val" property="val" />
+        <result column="type" property="type" />
+        <result column="oper_user" property="operUser" />
+        <result column="note" property="note" />
+        <result column="is_pub" property="isPub" />
+        <result column="group_name" property="groupName" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, val, type, oper_user, note, is_pub, group_name
+    </sql>
+
+    <select id="queryAll" resultMap="BaseResultMap">
+        select * from ts_dict
+    </select>
+
+</mapper>

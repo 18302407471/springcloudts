@@ -1,0 +1,23 @@
+server:
+  port: 8769
+spring:
+  application:
+    name: service-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8801/eureka/
+zuul:
+  routes:
+    api-1:
+      path: /api/vehts/**
+      serviceId: veh-ts
+    api-2:
+      path: /api/usercenter/**
+      serviceId: usercenter
+    api-3:
+      path: /api/largescreen/**
+      serviceId: largescreen
+  prefix: /v1
+  add-proxy-headers: true
+  sensitive-headers:

@@ -1,0 +1,35 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8801/eureka/
+server:
+  port: 8803
+spring:
+  application:
+    name: veh-ts
+  datasource:
+    url: jdbc:mysql://10.11.1.5:3306/website?useUnicode=true&characterEncoding=utf-8
+    username: hejian
+    password: hejian@web
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      auto-commit: true
+      connection-test-query: select 1
+      connection-timeout: 9000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      maximum-pool-size: 15
+      minimum-idle: 10
+mybatis-plus:
+  type-aliases-package: com.vehts.entity
+  type-aliases-super-type: java.lang.Object
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+    cache-enabled: true
+    lazy-loading-enabled: true
+    multiple-result-sets-enabled: true
+    use-generated-keys: true
+    default-statement-timeout: 60
+    default-fetch-size: 100
